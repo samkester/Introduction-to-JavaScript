@@ -210,7 +210,7 @@ console.log(countVowels("Interesting")); // 4
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+let prompt = window.prompt("Enter your rock-paper-scissors move.");
 
-
-
+console.log(rockPaperScissors(prompt));
 
