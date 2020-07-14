@@ -188,6 +188,23 @@ console.log(letterGradeFor(50));  // F
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+const vowels = "aeiou";
+
+function countVowels(inputString)
+{
+    inputString = String(inputString).toLowerCase();
+
+    let result = 0;
+
+    for(let i = 0; i < inputString.length; i++)
+    {
+        if(vowels.includes(inputString[i])) result ++;
+    }
+
+    return result;
+}
+
+console.log(countVowels("Interesting")); // 4
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
