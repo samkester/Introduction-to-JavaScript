@@ -1,35 +1,46 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+const votingAge = 18;
+console.log(votingAge > 18);
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
-
-
+let foo = "bar";
+let change = true;
+if(change === true)
+{
+    foo = "bar-2";
+}
+console.log(foo);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
-
+const dateStr = "1999"
+const dateInt = Number(dateStr);
+console.log(dateStr);
+console.log(dateInt);
 
 //Task d: Write a function to multiply a*b 
 
+function mult(a, b)
+{
+    return a*b;
+}
 
-
+console.log(mult(2,3));
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogYears(humanYears)
+{
+    return humanYears * 7;
+}
 
-
-
+console.log(dogYears(29));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -49,18 +60,35 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(weight, age)
+{
+    if(age < 1)
+    {
+        //puppy values
+        if(age < 4/12) return 0.1 * weight; // 4/12 year = 4 months; this value is also used for <2 months because there was no value specified
+        else if(age < 7/12) return 0.05 * weight;
+        else return 0.04 * weight;
+    }
+    else
+    {
+        //adult values
+        if(weight <= 5) return 0.05 * weight;
+        else if(weight <= 10) return 0.04 * weight;
+        else if(weight <= 15) return 0.03 * weight;
+        else return 0.02 * weight;
+    }
+}
 
-
-
+console.log(dogFeeder(15, 1))
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+
   
 
 /************************************************************** Task 5 **************************************************************/
