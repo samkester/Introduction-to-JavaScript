@@ -170,17 +170,23 @@ annoyingSong(5);
 //60s should be D 
 //and anything below 60 should be F
   
-
+function letterGradeFor(numberGrade)
+{
+    if(numberGrade >= 90) return "A";
+    if(numberGrade >= 80) return "B"; // the nature of `return` makes an "else" here redundant. We will only ever reach this code if numberGrade < 90
+    if(numberGrade >= 70) return "C";
+    if(numberGrade >= 60) return "D";
+    return "F";
+}
   
-  
+console.log(letterGradeFor(100)); // A
+console.log(letterGradeFor(75));  // C
+console.log(letterGradeFor(50));  // F
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
-
-
-
 
 
 /************************************************************** Stretch **************************************************************/
