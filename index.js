@@ -128,24 +128,38 @@ rockPaperScissors("spock");
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kmToMiles(km)
+{
+    return km * 0.621371;
+}
 
-
-
+console.log(kmToMiles(100));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function feetToCm(feet)
+{
+    return feet * 30.48;
+}
 
-
-
+console.log(feetToCm(10));
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(bottles)
+{
+    for(i = bottles; i > 0; i--)
+    {
+        if(i === 1) console.log("1 bottle of soda on the wall, 1 bottle of soda, take it down, pass it around, no bottles of soda on the wall!");
+        else if(i === 2) console.log("2 bottles of soda on the wall, 2 bottles of soda, take one down, pass it around, 1 bottle of soda on the wall!");
+        else console.log(String(i) + " bottles of soda on the wall, " + i + " bottles of soda, take one down, pass it around, " + (i - 1) + " bottles of soda on the wall!");
+    }
+}
 
-
-
+annoyingSong(5);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
