@@ -88,8 +88,41 @@ console.log(dogFeeder(15, 1))
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+const validMoves = ["rock", "paper", "scissors"];
 
-  
+function rockPaperScissors(inputMove)
+{
+    playerMove = validMoves.indexOf(inputMove); // 0, 1, 2 for valid moves, -1 if invalid
+    if(playerMove === -1)
+    {
+        console.log("Please enter a valid move.");
+        return;
+    }
+    computerMove = Math.floor(Math.random() * 3); // generates an integer from 0 to 2 (inclusive)
+
+    let result = "Your move: " + validMoves[playerMove] + "; CPU move: " + validMoves[computerMove] + "; ";
+
+    if(playerMove === computerMove)
+    {
+        result += "TIE";
+    }
+    else if(playerMove === computerMove + 1 || playerMove === computerMove - 2)
+    {
+        // two win conditions: either the player move is 1 higher on the list, OR it's 2 lower (rock 0 beats scissors 2)
+        result += "YOU WIN";
+    }
+    else
+    {
+        // since we didn't win, and didn't tie, we must've lost
+        result += "YOU LOSE";
+    }
+
+    console.log(result);
+}
+
+rockPaperScissors("rock");
+rockPaperScissors("scissors");
+rockPaperScissors("spock");
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
